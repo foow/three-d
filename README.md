@@ -63,7 +63,9 @@ $ cargo run --example triangle --release
 Build and generate web output (webassembly, javascript and html files) into the pkg folder:
 
 ```console
-$ wasm-pack build examples/triangle --target web --out-name web --out-dir ../../pkg
+$ cargo build --example triangle --target wasm32-unknown-unknown
+$ wasm-bindgen ../target/wasm32-unknown-unknown/debug/triangle.wasm --out-dir ../pkg/ --target web
+//$ wasm-pack build examples/triangle --target web --out-name web --out-dir ../../pkg
 ```
 
 Install a server that properly defines the `application/wasm` mime type for example:
