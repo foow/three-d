@@ -64,7 +64,7 @@ Build and generate web output (webassembly, javascript and html files) into the 
 
 ```console
 $ cargo build --example triangle --target wasm32-unknown-unknown
-$ wasm-bindgen ../target/wasm32-unknown-unknown/debug/triangle.wasm --out-dir ../pkg/ --target web
+$ wasm-bindgen ../target/wasm32-unknown-unknown/debug/triangle.wasm --out-name pkg --out-dir ../pkg/ --target web
 //$ wasm-pack build examples/triangle --target web --out-name web --out-dir ../../pkg
 ```
 
